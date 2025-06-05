@@ -294,7 +294,7 @@
             
             <div class="date-display" id="current-date"></div>
             
-            <form id="progress-form">
+            <form onsubmit="submitProgress(event)" id="progress-form">
                 <div class="form-group">
                     <label for="class-select">🏫 選擇班級</label>
                     <select id="class-select" required>
@@ -856,7 +856,8 @@
     </script>
 
 <script>
-async function submitProgress() {
+async function submitProgress(event) {
+  event.preventDefault(); {
   const classValue = document.getElementById("class").value;
   const seatValue = document.getElementById("seat").value;
   const chapterValue = document.querySelector('input[name="chapter"]:checked')?.value || "";
