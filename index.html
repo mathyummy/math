@@ -382,7 +382,7 @@
         // 讀取 Google Sheet 資料
         async function loadProgressDataFromSheet() {
             try {
-                const res = await fetch("https://script.google.com/macros/s/AKfycbzeJvf_tEB2ZLDo6A_I9KnA5tedWHSsc3CeHRazXt23VmykDuLFYR3eFbitDC_Ve7sN/exec");
+                const res = await fetch("https://script.google.com/macros/s/AKfycbzkqwaixSjoh67drM3f-SO4f2_GOypao0LfrhPDIrIIhAhVAgJkBDEZMy45V5tFivkb/exec");
                 const rows = await res.json();
                 const [headers, ...dataRows] = rows;
                 progressData = dataRows.map(row => {
@@ -417,7 +417,7 @@
             console.log('提交進度:', formData);
 
             try {
-                const res = await fetch("https://script.google.com/macros/s/AKfycbzeJvf_tEB2ZLDo6A_I9KnA5tedWHSsc3CeHRazXt23VmykDuLFYR3eFbitDC_Ve7sN/exec", {
+                const res = await fetch("https://script.google.com/macros/s/AKfycbzkqwaixSjoh67drM3f-SO4f2_GOypao0LfrhPDIrIIhAhVAgJkBDEZMy45V5tFivkb/exec", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
